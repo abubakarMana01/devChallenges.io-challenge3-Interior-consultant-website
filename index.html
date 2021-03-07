@@ -16,32 +16,18 @@
 			href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
 			rel="stylesheet"
 		/>
-		<script defer src="src/script.js"></script>
 		<link rel="stylesheet" href="./src/style.css" />
-
-		<title>Challenge 3 - Interior Consultant Challenge</title>
+		<title>Challenge 3 || Interior Consultant</title>
 	</head>
 	<body>
 		<nav>
-			<div class="icon"><p>THIS INTERIOR</p></div>
+			<input type="checkbox" name="check" id="check" />
+			<div class="hamburger"><div></div></div>
+			<div class="logo">This Interior</div>
 			<div class="nav-links">
-				<ul class="nav-links-list">
-					<li><a href="#" class="line">Home</a></li>
+				<ul>
+					<li><a href="#" class="home-line">Home</a></li>
 					<li><a href="#">Collection</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#" id="contact">Contact</a></li>
-				</ul>
-			</div>
-			<img
-				id="hamburger"
-				src="https://img.icons8.com/material-two-tone/24/000000/menu--v1.png"
-			/>
-			<a href="#" class="close">&times;</a>
-
-			<div class="side-nav">
-				<ul class="side-links">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Services</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
@@ -49,30 +35,34 @@
 		</nav>
 		<section>
 			<div class="left">
-				<h1>Modern Interior</h1>
-				<p>
-					A full-Service residential & commercial interior design and
-					staging company offering professional organizing &
-					eco-services.
-				</p>
-				<button>Read more &RightArrow;</button>
+				<div class="left-container">
+					<h1>Modern interior</h1>
+					<p>
+						A full-Service residential & commercial interior design
+						and staging company offering professional organizing &
+						eco-services.
+					</p>
+					<button>Read more &rightarrow;</button>
+				</div>
 			</div>
 			<div class="right">
-				<img src="./src/img/photo1.png" />
 				<div class="card">
 					<div class="card-top">
-						<img src="./src/img/photo2.png" />
-						<div class="span">
-							<h3>Aliza Webber</h3>
+						<div class="card-img">
+							<img src="./src/img/photo2.png" />
+						</div>
+						<div class="info">
+							<h2>Aliza Webber</h2>
 							<p>Interior designer</p>
 						</div>
 					</div>
 					<div class="card-bottom">
-						<h2>Designed in 2021 by Aliza Webber</h2>
+						<h1>Designed in 2020 by Aliza Webber</h1>
 					</div>
 				</div>
 			</div>
 		</section>
+
 		<footer>
 			<p>
 				created by
@@ -80,5 +70,26 @@
 				devChallenges.io
 			</p>
 		</footer>
+
+		<script>
+			const checkbox = document.querySelector('#check');
+			const hamburger = document.querySelector('.hamburger');
+			const body = document.querySelector('body');
+
+			function hideBodyOverflow() {
+				body.style.overflow = 'hidden';
+			}
+			function showBodyOverflow() {
+				body.style.overflow = 'visible';
+			}
+
+			checkbox.addEventListener('click', () => {
+				if (checkbox.checked === true) {
+					hideBodyOverflow();
+				} else {
+					showBodyOverflow();
+				}
+			});
+		</script>
 	</body>
 </html>
